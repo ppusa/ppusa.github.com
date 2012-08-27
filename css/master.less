@@ -1,0 +1,176 @@
+@background-color: #004992;
+@blue: #004992;
+.rounded(@radius: 15px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    -moz-background-clip: padding; 
+    -webkit-background-clip: padding-box; 
+    background-clip: padding-box;
+}
+.linear_gradient(@top_color, @bottom_color, @bg_color) {
+  background-color: @bg_color;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@top_color), to(@bottom_color)); 
+  background-image: -webkit-linear-gradient(top, @top_color, @bottom_color); 
+  background-image:    -moz-linear-gradient(top, @top_color, @bottom_color); 
+  background-image:     -ms-linear-gradient(top, @top_color, @bottom_color); 
+  background-image:      -o-linear-gradient(top, @top_color, @bottom_color); 
+  background-image:         linear-gradient(top, @top_color, @bottom_color);
+  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='@top_color', EndColorStr='@bottom_color');*/  
+}
+.box_shadow(@shadow_color: #444, @x: 0px, @y: 4px, @z: 5px) {
+  
+  -moz-box-shadow: @x @y @z @shadow_color; 
+  -webkit-box-shadow: @x @y @z @shadow_color; 
+  box-shadow: @x @y @z @shadow_color; 
+}
+html,body {
+	font-family:  Helvetica, Arial,  Verdana, sans-serif;
+	font-size: 16px;
+  margin:0px;
+  padding:0px; 
+  background-color: @background-color;
+}
+p {
+  font-family: Georgia;
+  font-size: 16px;
+  margin: 0px;
+  padding: 20px;
+}
+.content {
+  width: 960px;
+  margin: auto;
+}
+.center {
+  .content()
+}
+.blue {
+  color: blue;
+}
+#header {
+  height: 160px;
+  .box_shadow();
+  .linear_gradient(#ddd,#aaa,#ddd);
+  margin-bottom: 30px;
+}
+#nav-bar {
+  margin-top: 60px;
+  float: right;
+}
+#nav-bar li {
+  list-style-type: none;
+  display: inline;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
+  
+}
+#nav-bar li a {
+  text-shadow: 1px 1px 3px #AAA;
+  text-decoration: none;
+  color: #7b7b7b
+}
+#nav-bar li a:hover{
+  color: #3AB900;
+}
+#nav-bar li a.current-page {
+  color: #0060BC ;
+}
+/*Home page*/
+#home{
+  height: 415px;
+}
+#home h1#top {
+  padding-top: 20px;
+}
+#top {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0px;
+  margin-left: 20px;
+  color: @blue;
+}
+#home p {
+  font-size: 20px;
+  text-align: justify;
+}
+#bottom {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0px;
+  margin-right: 20px;
+  color: @blue;
+  text-align: right;
+}
+
+/*Tech page*/
+#tech{
+  height: 900px;
+}
+#tech img {
+  margin: 20px 60px;
+}
+
+
+/*Integrators/Growers page*/
+#partners{
+  height: 280px;
+}
+#partners h2 {
+  font-size: 19px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin: 0px;
+}
+#partners li {
+ font-size: 16px; 
+ font-family: Georgia;
+}
+/*Projects*/
+#projects {
+  height: 415px;
+}
+#projects ul {
+  margin: 0px;
+  padding-left: 40px;
+}
+#projects ul li p{
+  margin: 0px;
+  padding: 20px 0px 10px 0px;
+  
+}
+#projects img {
+  width: 880px;
+  height: 300px;
+}
+/*Press*/
+/*About*/
+#about {
+  height: 100px;
+}
+#about p {
+  padding: 20px;
+  font-size: 16px;
+  text-align: justify;
+}
+/*contact*/
+#contact {
+  height: 135px;
+}
+#contact span {
+  padding-left: 20px;
+  margin: 0px
+}
+#contact p {
+  padding-left: 20px;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  font-size: 16px;
+}
+#contact a {
+  padding-left: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #004992;
+}
